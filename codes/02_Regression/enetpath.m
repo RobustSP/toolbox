@@ -36,10 +36,10 @@ if nargin < 6 || isempty(intcpt)
     intcpt = true;
 end
 if nargin < 5 || isempty(eps)
-    eps  = 10^-3; 
+    eps  = 10^-4; 
 end
 if nargin < 4 || isempty(L)
-    L = 120;
+    L = 100;
 end
 if nargin < 3 || isempty(alpha)
     alpha = 1;
