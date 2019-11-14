@@ -40,6 +40,8 @@ if (nargin<4)
      A  = [1 0 Ts 0; 0 1 0 Ts; 0 0 1 0; 0 0 0 1];   % state transition matrix
      Q = sigma_v^2*eye(2);
      G = [Ts^2/2*eye(2); Ts*eye(2)];
+     parameter.dim = length(BS(1,:));             % dimension of positions, default is 2 
+     parameter.var_est=1;          % to be estimated in line 88
 end
 if (nargin==4)
      P0 = parameter.P0;
