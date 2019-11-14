@@ -12,8 +12,11 @@ function [B, B0, lamgrid] = rankflassopath(y,X,lambda2,L,eps,printitn)
 %             largest Lambda value in the grid. Default is eps = 10^-4. 
 % printitn : print iteration number (default = 0, no printing)
 % OUTPUT:
-%   b      : numeric regression coefficient vector
-%   iter   : positive integer, the number of iterations of IRWLS algorithm
+%       B: Fitted rank fused-Lasso regression coefficients, a p-by-(L+1) matrix, 
+%           where p is the number of predictors (columns) in X, and L is 
+%           the  number of Lambda values.
+%       B0: estimates values of intercepts
+%       lamgrid: = lambda parameters 
 %
 % version: Sep 2, 2018 
 % authors: Esa Ollila 
