@@ -52,7 +52,7 @@ BBi = zeros(1,K);   % biweight estimate of sine coefficients at w(k)
 
 
 k = 4;    % tuning constant as recommended in the paper by Tatum and Hurvich
-xb = biweight_location_book(x_part, k);   % biweight location estimate
+xb = MlocTUK(x_part, k);   % Tukey's location M-estimate
 xc = (x_part-xb)';  % robustly centered time series
 
 for k = 1:K
