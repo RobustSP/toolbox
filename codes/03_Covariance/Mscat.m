@@ -98,6 +98,7 @@ switch loss
            const = p/n;             
         end      
     case 'Tyler'
+           upar = 0;
            ufun = @(t,v) 1./t; % weight function
            const = p/n;     
     otherwise
