@@ -15,7 +15,7 @@ function [beta,iter] = enet(y,X,beta,lambda,alpha,printitn)
 %           not given then use alpha = 1 (Lasso)
 % printitn: print iteration number (default = 0, no printing)
 % OUTPUT:
-%   b1    : (numberic) the regression coefficient vector
+%   beta    : (numberic) the regression coefficient vector
 %   iter  : (numeric) # of iterations 
 % version: Aug 31, 2018
 % authors: Esa Ollila 
