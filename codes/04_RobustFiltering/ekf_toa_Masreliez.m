@@ -95,7 +95,7 @@ for kk=2:N
      K = P_min(:,:,kk) *H'*inv(C');
        
      if (strcmp(parameter.singlescore,'asymmetric')) 
-       [v vp] = Asymmetric_tanh_unscaled(nu,parameter.c1,parameter.c2,parameter.x1);
+       [v vp] = asymmetric_tanh(nu,parameter.c1,parameter.c2,parameter.x1);
      end
      
      th_hat(:,kk) = th_hat_min(:,kk) + K*v';
