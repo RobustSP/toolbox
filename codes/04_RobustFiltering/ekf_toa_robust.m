@@ -88,13 +88,7 @@ for kk=2:N
     
     % measurement residuals
     vk = r_ges(:,kk) -h_min';
-    
-    % process residuals
-   % wk = th_hat_min(:,kk) - 
-    
-    %psi = [A*(th_hat(:,kk-1) - th_hat_min(:,kk)) ; -vk]; %+G*[1 ; 1]
-    
-    
+        
        
     
     Psi = blkdiag(P_min(:,:,kk),R);
@@ -107,12 +101,10 @@ for kk=2:N
     end
    
     S = inv(C')*[eye(4); H];
-    %v = -inv(C')*psi;
     rk = inv(C')*[th_hat_min(:,kk); r_ges(:,kk) - h_min' + H* th_hat_min(:,kk)];
     
     
     th_hat(:,kk) = pinv(S)*rk;
-    %[th_hat(:,kk) th numberit(kk) ] = static_param_est(rk,S,th_hat(:,kk),parameter);
     
     [th_hat(:,kk)] = m_param_est(rk,S,th_hat(:,kk),parameter);
 
